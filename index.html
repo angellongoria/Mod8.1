@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mod8.1</title>
+	<link rel="stylesheet" href="main.css">
+</head>
+<div id="container">
+	<nav>
+		
+	  <ul>
+		<li><a href="https://www.youtube.com/watch?v=h2kUX_Fmj7k">About</a></li>
+		
+		<li><a href="https://www.pinterest.com/">Gallery</a></li>
+		 
+		<li><a href="https://mail.google.com/">Contact</a></li>		
+		</ul>
+		
+	</nav>
+	<section class="flex-container" >
+	 <article class="left">
+		<form action="">
+			<img src="logo3.png" alt="logo3"
+				width= "340px"
+				height= "225px">
+			<label for="firstName"> First Name:
+			
+			</label>
+			<br>
+			<input type="text" id="firstName">
+		
+			<br>
+			<p>What's your favorite fruit?</p>
+			<label for="strawberry">Strawberry</label>
+			<input type="checkbox" id="strawberry">
+			<br>
+			<label for="kiwi">Kiwi</label>
+			<input type="checkbox" id="kiwi">
+			<br>
+			<label for="banana">Banana</label>
+			<input type="checkbox" id="banana">
+			
+			<p>What's your favorite Fruit Sando?</p>
+			<input type="radio" id="veggie">
+			<input type="submit" value="Enter">
+		 </form>
+		</article>
+		<article class="right">
+			<h1>HTML Geolocation</h1>
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+		<img src="strawberry.png" alt="Strawberry"
+			 width= "400px"
+			 height= "400px">
+		</article>
+	
+	</section>
+	</div>
+<body>
+	
+</body>
+</html>
